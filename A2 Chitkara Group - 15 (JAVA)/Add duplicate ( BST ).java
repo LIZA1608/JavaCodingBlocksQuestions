@@ -32,6 +32,7 @@ public class Main {
 		this.add(data, this.root);
 	}
 
+	
 	private void add(int data, Node node) {
 		if (this.isEmpty()) {
 			Node n = new Node(data, null, null);
