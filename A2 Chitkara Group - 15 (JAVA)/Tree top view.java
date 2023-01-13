@@ -1,6 +1,3 @@
-
-
-
 import java.util.*;
 public class Main {
     public static void main(String args[]) {
@@ -10,7 +7,6 @@ public class Main {
 		tree.topView();
 
     }
-
     class BinaryTree {
 
 	    class Node {
@@ -24,22 +20,18 @@ public class Main {
 	            this.hd = Integer.MAX_VALUE;
 	            this.left = this.right = null;
 	        }
-
 	    }
-
 	    public BinaryTree(Scanner s) {  // Binary tree must be made like this to store the value of root .. Your was poorly made as the value of root was lost
 	        this.root = this.takeInput(s);
 	    }
-
 	    Node root;
-	    
-	    public Node takeInput(Scanner s) {  //Modified takeInput method as in your method the program stops taking input after first -1 while that might not always be the case
+	    public Node takeInput(Scanner s) {  
+		    //Modified takeInput method as in your method the program stops taking input after first -1 while that might not always be the case
 	        // enter the element for the root
 	        Queue<Node> q = new LinkedList<>();
 	        int data = s.nextInt();
 	        Node node = new Node(data);
 	        if(data != -1) {
-	       
 	        q.add(node);
 	        }
 	        while (!q.isEmpty()) {
